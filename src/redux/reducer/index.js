@@ -1,9 +1,12 @@
-import changeTheNumber from "./valueChange";
-
-import { combineReducers } from "redux";
-
-const rootReducer = combineReducers({
-    changeTheNumber
-})
-
-export default rootReducer;
+import { INCRIMENT, DECRIMENT } from "../action/ActionType";
+const initialState = 16;
+export const Reducer =(state = initialState, action)=> {
+    switch(action.type){
+        case INCRIMENT:
+            return state + 1;
+        case DECRIMENT:
+            return state - 1;
+        default:
+            return state;
+    }
+}
