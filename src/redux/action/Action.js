@@ -1,9 +1,7 @@
 import { INCRIMENT, DECRIMENT } from "./ActionType"
-export const Incriment = (data) => ({
+export const Incriment = () => ({
     type: INCRIMENT,
-    payload: data,
 });
-export const Decriment = (data) => ({
+export const DecrimentNum = () => ({
     type: DECRIMENT,
-    payload: data,
 });
