@@ -7,12 +7,12 @@ import {
 
 import Incriment from './Incriment';
 import Decriment from './Decriment';
-import store from "./redux/store/store"
-import { Provider, useSelector, useDispatch } from 'react-redux';
-
+import { useSelector, useDispatch } from "react-redux";
+import { incNumber, decNumber } from "./redux/actions";
 
 const MainScreen = () => {
- const myState = useSelector((state)=>state)
+  const myState = useSelector((state) => state.changeTheNumber);
+  const dispatch = useDispatch();
 const[num, setNum] = useState(13);
   return (
     <SafeAreaView style={{height:'100%', width:'100%'}}>

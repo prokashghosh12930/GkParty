@@ -5,16 +5,16 @@ import {
   SafeAreaView,Text, View, TouchableOpacity
 } from 'react-native';
 
-import { myStore } from './src/redux/store/store';
+import  store  from './src/redux/store';
 import MainScreen from './src/MainScreen';
 import { Provider } from 'react-redux';
 
 
 const App = () => {
   return (
-    <Provider store ={myStore}>
+    <Provider store={store}>
       <MainScreen/>
-    </Provider>
+      </Provider>
   );
 };
 export default App;
